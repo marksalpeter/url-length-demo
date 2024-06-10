@@ -3,6 +3,8 @@ import { useEffect } from "react"
 import { useContainsEveryToken } from "@/app/core/views/hooks/useContainsEveryToken"
 import { useFetchTrackingUrl } from "@/app/core/views/hooks/useFetchTrackingUrl"
 
+const userAgent = typeof window !== "undefined" ?  window?.navigator?.userAgent: ""
+
 /**
  * Experiment calls a large tracking url with 20 tokens in the query params of the url.
  * If the endpoint is able to successfully parse and return all 20 tokens, the experiment is a success.
@@ -20,12 +22,12 @@ export function Experiment() {
     // Compare the tokens when the fetchTrackingUrlResponse is successful
     useEffect(() => {
         if (fetchTrackingUrlResponse.status === "success") containsEveryToken(fetchTrackingUrlResponse.tokens!)
-    }, [fetchTrackingUrlResponse.status])
+    }, [containsEveryToken, fetchTrackingUrlResponse.tokens, fetchTrackingUrlResponse.status])
 
     // Display status messages to the user
     return (<>
         <p className="font-bold text-md bottom-1">
-            {window?.navigator?.userAgent}
+            {userAgent}
         </p>
         <p>
            Calling the tracking url..

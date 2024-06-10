@@ -15,8 +15,10 @@ const dependencies:Dependencies = {
 };
 
 // Inject Dependencies into the React component tree
-export default ({ children }:PropsWithChildren) => (
+const InjectDependencies = ({ children }:PropsWithChildren) => (
     <DependenciesProvider value={dependencies}>
         {children}
     </DependenciesProvider>
 )
+
+export default InjectDependencies;

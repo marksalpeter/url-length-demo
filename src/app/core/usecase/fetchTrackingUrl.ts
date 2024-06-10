@@ -4,6 +4,8 @@ import {
     TrackingTokens 
 } from "@/app/core/entities/trackingTokens";
 
+const url = typeof window !== "undefined"? window?.location?.href : ""
+
 /**
  * FetchTrackingUrl fetches tracking tokens from an api endpoint
  * @returns TrackingTokens from the api endpoints body
@@ -12,11 +14,10 @@ export class FetchTrackingUrl implements Interface {
 
     constructor(
         private readonly repo: TrackingTokensRepository,
-        private readonly baseUrl = `${window?.location?.href}/api`
+        private readonly baseUrl = `${url}/api`
     ) {}
 
     public async fetch(): Promise<TrackingTokens> {
-        console.log(this.baseUrl)
         const url = new URL(this.baseUrl);
 
         // Append all tokens to the url params
