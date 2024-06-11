@@ -2,7 +2,7 @@ import {
     TrackingTokens, 
     ContainsEveryTrackingToken as Interface, 
     TrackingTokensRepository 
-} from "@/app/core/entities/trackingTokens";
+} from "@/core/entities/trackingTokens";
 
 /**
  * CompareTrackingTokens checks if a url contains all the tracking tokens

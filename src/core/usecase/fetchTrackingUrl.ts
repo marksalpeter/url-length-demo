@@ -2,7 +2,7 @@ import {
     TrackingTokensRepository, 
     FetchTrackingUrl as Interface, 
     TrackingTokens 
-} from "@/app/core/entities/trackingTokens";
+} from "@/core/entities/trackingTokens";
 
 const url = typeof window !== "undefined"? window?.location?.href : ""
 

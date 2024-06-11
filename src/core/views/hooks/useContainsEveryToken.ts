@@ -1,6 +1,6 @@
-import { useDependencies } from "@/app/core/views/providers/dependencies"
+import { useDependencies } from "@/core/views/providers/dependencies"
 import { useState, useCallback } from "react"
-import { TrackingTokens } from "@/app/core/entities/trackingTokens"
+import { TrackingTokens } from "@/core/entities/trackingTokens"
 
 export type State = {
     containsEveryTokenResponse: {

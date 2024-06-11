@@ -1,7 +1,7 @@
-import { TrackingTokensRepository } from "./core/data/repository/trackingTokens";
-import { ContainsEveryTrackingToken } from "./core/usecase/containsEveryTrackingToken";
-import { FetchTrackingUrl } from "./core/usecase/fetchTrackingUrl";
-import { Dependencies, DependenciesProvider } from "./core/views/providers/dependencies";
+import { TrackingTokensRepository } from "../core/data/repository/trackingTokens";
+import { ContainsEveryTrackingToken } from "../core/usecase/containsEveryTrackingToken";
+import { FetchTrackingUrl } from "../core/usecase/fetchTrackingUrl";
+import { Dependencies, DependenciesProvider } from "../core/views/providers/dependencies";
 import { PropsWithChildren } from "react";
 
 // Initialize dependencies

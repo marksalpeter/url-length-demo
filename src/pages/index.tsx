@@ -1,6 +1,5 @@
-"use client"
-import InjectDependencies from "@/app/dependencies"
-import { Experiment } from "@/app/core/views/components/experiment";
+import InjectDependencies from "@/pages/dependencies"
+import { Experiment } from "@/core/views/components/experiment";
 
 export default function Home() {
   return (

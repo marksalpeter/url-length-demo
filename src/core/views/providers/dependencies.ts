@@ -2,7 +2,7 @@ import { createContext, useContext } from "react"
 import { 
     ContainsEveryTrackingToken, 
     FetchTrackingUrl, 
-} from "@/app/core/entities/trackingTokens"
+} from "@/core/entities/trackingTokens"
 
 export type Dependencies = {
     ContainsEveryTrackingToken: ContainsEveryTrackingToken,

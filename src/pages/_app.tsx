@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import type { AppProps } from 'next/app'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,13 +11,11 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  Component, pageProps,
+}:AppProps) {
   return (
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
-      </html>
+    <div className={inter.className}>
+      <Component {...pageProps} />
+    </div>
   );
 }

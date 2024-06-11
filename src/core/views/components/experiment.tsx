@@ -1,9 +1,8 @@
-"use client"
 import { useEffect } from "react"
-import { useContainsEveryToken } from "@/app/core/views/hooks/useContainsEveryToken"
-import { useFetchTrackingUrl } from "@/app/core/views/hooks/useFetchTrackingUrl"
+import { useContainsEveryToken } from "@/core/views/hooks/useContainsEveryToken"
+import { useFetchTrackingUrl } from "@/core/views/hooks/useFetchTrackingUrl"
+import { useUserAgent } from "@/core/views/hooks/useUserAgent"
 
-const userAgent = typeof window !== "undefined" ?  window?.navigator?.userAgent: ""
 
 /**
  * Experiment calls a large tracking url with 20 tokens in the query params of the url.
@@ -13,6 +12,7 @@ export function Experiment() {
     // Import dependencies
     const { fetchTrackingUrl, fetchTrackingUrlResponse } = useFetchTrackingUrl()
     const { containsEveryToken, containsEveryTokenResponse } = useContainsEveryToken()
+    const { userAgent } = useUserAgent()
 
     // Fetch the tracking url when the component mounts
     useEffect(() => {

@@ -2,7 +2,7 @@ import {
     TrackingTokensRepository, 
     ParseTrackingTokensFromUrl as Interface, 
     TrackingTokens 
-} from "@/app/core/entities/trackingTokens";
+} from "@/core/entities/trackingTokens";
 
 /**
  * ParseTrackingTokensFromUrl parses tracking tokens from a urls query string

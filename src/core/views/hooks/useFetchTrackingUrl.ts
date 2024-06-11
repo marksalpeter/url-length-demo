@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react"
-import { useDependencies } from "@/app/core/views/providers/dependencies"
+import { useDependencies } from "@/core/views/providers/dependencies"
 import { TrackingTokens } from "../../entities/trackingTokens"
 
 export type State = {
