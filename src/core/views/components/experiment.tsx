@@ -29,9 +29,7 @@ export function Experiment() {
         <p className="font-bold text-md bottom-1">
             {userAgent}
         </p>
-        <p>
-           Calling the tracking url..
-        </p>
+        {userAgent && <p>Calling the tracking url..</p>}
         {fetchTrackingUrlResponse.status === "success" && <p>Url made round trip to server...</p>}
         {containsEveryTokenResponse.status === "success" && <p>Tokens made the round trip intact...</p>}
         {fetchTrackingUrlResponse.status === "error" && <p className="text-red-600 font-bold">Failed server roundtrip</p>}
